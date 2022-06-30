@@ -1,0 +1,62 @@
+{
+  "name": "wgg/flysystem-doctrine",
+  "description": "Flysystem adapter for Doctrine DBAL",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Webgarden Developer",
+      "email": "developer+github@webgarden.eu",
+      "homepage": "https://webgarden.eu/",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^8.0",
+    "league/flysystem": "^3.0",
+    "doctrine/dbal": "^3.0.0"
+  },
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "^3.6",
+    "phpstan/phpstan": "^1.4",
+    "phpstan/phpstan-phpunit": "^1.1",
+    "phpunit/phpunit": "~9.5",
+    "league/flysystem-adapter-test-utilities": "^3.0",
+    "symfony/var-dumper": "^6.1"
+  },
+  "scripts": {
+    "cs-fix": [
+      "php-cs-fixer fix"
+    ],
+    "phpstan": [
+      "@phpstan:src",
+      "@phpstan:test"
+    ],
+    "phpstan:src": [
+      "phpstan analyse -c phpstan.neon"
+    ],
+    "phpstan:test": [
+      "phpstan analyse -c phpstan.tests.neon"
+    ],
+    "test": [
+      "phpunit"
+    ]
+  },
+  "autoload": {
+    "psr-4": {
+      "WGG\\Flysystem\\Doctrine\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "WGG\\Flysystem\\Doctrine\\Tests\\": "tests/"
+    }
+  },
+  "config": {
+    "bin-dir": "bin"
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0-dev"
+    }
+  }
+}

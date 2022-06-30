@@ -1,0 +1,9 @@
+vendor
+bin
+.coverage-cache
+coverage.xml
+composer.lock
+.idea/
+phpunit.xml
+.phpunit.result.cache
+.php-cs-fixer.cache
