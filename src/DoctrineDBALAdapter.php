@@ -39,7 +39,7 @@ use Throwable;
  *      visibility: string,
  *      size: int,
  *      mimetype: string,
- *      timestamp: int,
+ *      timestamp: int
  * }
  * @phpstan-type DatabaseRecordWithContents array{
  *      path: string,
