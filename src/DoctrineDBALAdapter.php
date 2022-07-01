@@ -272,9 +272,16 @@ SQL,
             $queryBuilder = $this->connection
                 ->createQueryBuilder();
 
+            $expressionBuilder = $this->connection->createExpressionBuilder();
+
             $queryBuilder
                 ->delete($this->table)
-                ->where('path LIKE '.$queryBuilder->createNamedParameter($path.'%'))
+                ->where(
+                    $expressionBuilder->or(
+                        $expressionBuilder->eq('path', $queryBuilder->createNamedParameter($path)),
+                        $expressionBuilder->like('path', $queryBuilder->createNamedParameter($path.'/%'))
+                    )
+                )
                 ->executeStatement();
         } catch (Throwable $e) {
             throw UnableToDeleteDirectory::atLocation($path, $e->getMessage(), $e);
