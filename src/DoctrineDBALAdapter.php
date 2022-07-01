@@ -408,11 +408,15 @@ SQL,
                 ->select('path, size, mimetype, timestamp, type, visibility');
 
             if (!empty($path)) {
+                $expressionBuilder = $this->connection->createExpressionBuilder();
+
                 $queryBuilder
-                    ->andWhere($queryBuilder->expr()->or(
-                        $queryBuilder->expr()->eq('path', $queryBuilder->createNamedParameter($path)),
-                        $queryBuilder->expr()->like('path', $queryBuilder->createNamedParameter($path.'/%'))
-                    ));
+                    ->andWhere(
+                        $expressionBuilder->or(
+                            $expressionBuilder->eq('path', $queryBuilder->createNamedParameter($path)),
+                            $expressionBuilder->like('path', $queryBuilder->createNamedParameter($path.'/%'))
+                        )
+                    );
                 if ($deep) {
                     $queryBuilder->andWhere(
                         'level >= '.$queryBuilder->createNamedParameter($this->directoryLevel($path) + 1,
