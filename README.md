@@ -1,5 +1,9 @@
 # WGG\Flysystem\Doctrine
 
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/WebGardenGroup/flysystem-doctrine/PHPUnit?label=PHPUnit&style=flat-square)
+![Packagist PHP Version Support](https://img.shields.io/packagist/php-v/wgg/flysystem-doctrine)
+![Packagist Version](https://img.shields.io/packagist/v/wgg/flysystem-doctrine)
+
 This is a Flysystem adapter for Doctrine DBAL.
 
 ## Installation
