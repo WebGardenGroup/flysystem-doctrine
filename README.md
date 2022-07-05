@@ -1,8 +1,8 @@
 # WGG\Flysystem\Doctrine
 
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/WebGardenGroup/flysystem-doctrine/PHPUnit?label=PHPUnit&style=flat-square)
-![Packagist PHP Version Support](https://img.shields.io/packagist/php-v/wgg/flysystem-doctrine)
-![Packagist Version](https://img.shields.io/packagist/v/wgg/flysystem-doctrine)
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/WebGardenGroup/flysystem-doctrine/PHPUnit?label=PHPUnit&style=flat-square)](https://github.com/WebGardenGroup/flysystem-doctrine/actions/workflows/phpunit.yml)
+[![Packagist PHP Version Support](https://img.shields.io/packagist/php-v/wgg/flysystem-doctrine)](https://img.shields.io/packagist/php-v/wgg/flysystem-doctrine)
+[![Packagist Version](https://img.shields.io/packagist/v/wgg/flysystem-doctrine)](https://packagist.org/packages/wgg/flysystem-doctrine)
 
 This is a Flysystem adapter for Doctrine DBAL.
 
