@@ -2,11 +2,12 @@
 
 namespace WGG\Flysystem\Doctrine\Tests;
 
-use function dirname;
 use Doctrine\DBAL\DriverManager;
 use League\Flysystem\AdapterTestUtilities\FilesystemAdapterTestCase;
 use League\Flysystem\FilesystemAdapter;
 use WGG\Flysystem\Doctrine\DoctrineDBALAdapter;
+
+use function dirname;
 
 /**
  * @covers \WGG\Flysystem\Doctrine\DoctrineDBALAdapter

@@ -3,12 +3,9 @@
 namespace WGG\Flysystem\Doctrine;
 
 use DateTimeImmutable;
-use const DIRECTORY_SEPARATOR;
-use function dirname;
 use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\ParameterType;
 use Doctrine\DBAL\Types\Types;
-use function is_resource;
 use League\Flysystem\Config;
 use League\Flysystem\DirectoryAttributes;
 use League\Flysystem\FileAttributes;
@@ -31,6 +28,11 @@ use League\MimeTypeDetection\ExtensionMimeTypeDetector;
 use LogicException;
 use RuntimeException;
 use Throwable;
+
+use function dirname;
+use function is_resource;
+
+use const DIRECTORY_SEPARATOR;
 
 /**
  * @phpstan-type DatabaseRecord array{
